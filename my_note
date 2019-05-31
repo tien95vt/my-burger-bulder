@@ -3,3 +3,6 @@ burger-builder
 -- Update spinner in Modal.js -> shouldComponentUpdate with props.children
 -- componentWillMount -> render -> componentDidMount  (watch reason use in 221)
 -- remove old interceptor -> watch 212 -> .eject  -> preventing memory leaks
+
+
+-- use HOC withRoute -> access route for other next children
