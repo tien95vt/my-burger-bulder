@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actionTypes';
-import { Z_ASCII } from 'zlib';
 
 const initialState = {
     ingredients: null,
@@ -9,9 +8,9 @@ const initialState = {
 
 const INGREDIENTS_PRICES = {
     salad: 0.5,
+    bacon: 0.7,
     cheese: 0.4,
-    meat: 0.3,
-    bacon: 0.7
+    meat: 0.3
 };
 
 const reducer = (state = initialState, action) => {
@@ -37,7 +36,13 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_INGREDIENTS:
             return {
                 ...state,
-                ingredients: action.ingredients,
+                ingredients: {
+                    salad: action.ingredients.salad,
+                    bacon: action.ingredients.bacon,
+                    cheese: action.ingredients.cheese,
+                    meat: action.ingredients.meat 
+                },
+                totalPrice: 4,
                 error: false
             };
         case actionTypes.FETCH_INGREDIENTS_FAILED:
