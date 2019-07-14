@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from '../../../axios-orders';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Button from '../../../components/UI/Button/Button';
