@@ -13,7 +13,7 @@ import axios from '../../axios-orders';
 
 
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
 
     state = {
         purchasing: false,
@@ -80,7 +80,7 @@ class BurgerBuilder extends Component {
                 {burger}
             </Aux>
         );
-            
+
     }
 }
 
@@ -95,7 +95,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onIngredientAdded: (ingName) => dispatch(actions.addIngredient(ingName)),
-        onIngerdientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName)), 
+        onIngerdientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName)),
         onInitIngredients: () => dispatch(actions.initIngredients()),
         onInitPurChase: () => dispatch(actions.purchaseInit())
     }
